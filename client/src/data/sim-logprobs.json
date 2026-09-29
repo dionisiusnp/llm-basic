@@ -1,0 +1,25 @@
+{
+  "prompt": "Menu paling laris di kantin adalah nasi",
+  "candidates": [
+    { "token": " goreng", "logit": 4.2 },
+    { "token": " putih", "logit": 2.8 },
+    { "token": " udang", "logit": 1.9 },
+    { "token": " kuning", "logit": 1.1 },
+    { "token": " lemak", "logit": 0.4 },
+    { "token": " padang", "logit": -0.3 },
+    { "token": " bakar", "logit": -1.2 }
+  ],
+  "continuations": {
+    " goreng": {
+      "prompt": "Menu paling laris di kantin adalah nasi goreng",
+      "candidates": [
+        { "token": " spesial", "logit": 3.5 },
+        { "token": " dengan", "logit": 2.9 },
+        { "token": " pedas", "logit": 2.4 },
+        { "token": " telur", "logit": 1.8 },
+        { "token": " biasa", "logit": 1.2 },
+        { "token": " ayam", "logit": 0.7 }
+      ]
+    }
+  }
+}

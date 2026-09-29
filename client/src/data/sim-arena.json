@@ -1,0 +1,150 @@
+{
+  "tests": [
+    {
+      "id": "greeting",
+      "label": "Sapaan singkat",
+      "category": "Kecepatan",
+      "prompt": "Halo! Apa kabar?",
+      "cloud": {
+        "response": "Halo! Kabar baik, terima kasih sudah bertanya! Ada yang bisa saya bantu hari ini?",
+        "ttft_ms": 320,
+        "total_ms": 890,
+        "tokens_per_second": 45,
+        "prompt_tokens": 12,
+        "completion_tokens": 18
+      },
+      "local": {
+        "response": "Halo! Kabar baik. Ada yang bisa dibantu?",
+        "ttft_ms": 180,
+        "total_ms": 620,
+        "tokens_per_second": 28,
+        "prompt_tokens": 12,
+        "completion_tokens": 10
+      }
+    },
+    {
+      "id": "logic",
+      "label": "Soal logika",
+      "category": "Kualitas",
+      "prompt": "Ada 3 kotak: merah, biru, hijau. Bola ada di kotak yang bukan merah dan bukan di sebelah kanan kotak biru. Kotak biru ada di tengah. Di kotak mana bola berada?",
+      "cloud": {
+        "response": "Mari kita analisis:\n• Kotak biru ada di tengah (posisi 2)\n• Bola bukan di kotak merah\n• Bola bukan di sebelah kanan kotak biru (posisi 3)\n\nPosisi kotak: [1] [Biru/2] [3]\nJika merah di posisi 1 atau 3 dan bola tidak boleh di merah atau di posisi 3...\nBola ada di kotak **hijau** (posisi 1, sebelah kiri kotak biru).",
+        "ttft_ms": 410,
+        "total_ms": 2100,
+        "tokens_per_second": 38,
+        "prompt_tokens": 58,
+        "completion_tokens": 95
+      },
+      "local": {
+        "response": "Kotak biru di tengah. Bola bukan di merah, bukan di kanan biru (posisi 3). Jadi bola di kotak hijau (posisi 1, kiri).",
+        "ttft_ms": 290,
+        "total_ms": 1800,
+        "tokens_per_second": 22,
+        "prompt_tokens": 58,
+        "completion_tokens": 35
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Ringkasan teks panjang",
+      "category": "Kemampuan",
+      "prompt": "Ringkas teks ini dalam 3 kalimat:\n\nKantin kampus merupakan salah satu fasilitas penting yang menunjang kegiatan akademik mahasiswa dan dosen. Tidak hanya sekadar tempat makan, kantin juga menjadi ruang sosial di mana berbagai interaksi terjadi: dari diskusi tugas kelompok, pertemuan organisasi mahasiswa, hingga sekadar ngobrol santai di sela-sela kuliah. Di era digital ini, banyak kantin kampus yang mulai beradaptasi dengan teknologi, seperti sistem pemesanan online, pembayaran cashless, hingga pemanfaatan kecerdasan buatan untuk mengelola stok dan memprediksi permintaan menu. Transformasi ini tidak hanya meningkatkan efisiensi operasional, tetapi juga memberikan pengalaman yang lebih baik bagi pelanggan. Namun demikian, tantangan tetap ada: mulai dari resistensi terhadap perubahan, keterbatasan modal untuk adopsi teknologi, hingga kebutuhan pelatihan sumber daya manusia.",
+      "cloud": {
+        "response": "Kantin kampus berfungsi ganda sebagai tempat makan sekaligus ruang sosial bagi civitas akademika. Di era digital, banyak kantin yang mengadopsi teknologi seperti pemesanan online dan AI untuk manajemen stok guna meningkatkan efisiensi. Meski transformasi ini membawa manfaat, tantangan seperti keterbatasan modal dan kebutuhan pelatihan SDM masih perlu diatasi.",
+        "ttft_ms": 380,
+        "total_ms": 3200,
+        "tokens_per_second": 41,
+        "prompt_tokens": 198,
+        "completion_tokens": 78
+      },
+      "local": {
+        "response": "Kantin kampus adalah fasilitas penting yang juga berfungsi sebagai ruang sosial mahasiswa. Kini banyak kantin beradaptasi dengan teknologi digital untuk meningkatkan efisiensi operasional. Namun adopsi teknologi ini masih menghadapi tantangan modal dan pelatihan SDM.",
+        "ttft_ms": 520,
+        "total_ms": 4100,
+        "tokens_per_second": 18,
+        "prompt_tokens": 198,
+        "completion_tokens": 52
+      }
+    },
+    {
+      "id": "slang",
+      "label": "Bahasa gaul/Suroboyoan",
+      "category": "Kemampuan",
+      "prompt": "Rek, pean isok mbantu aku ga? Aku arep nuku nasgor tapi duitku kurang. Pie carane?",
+      "cloud": {
+        "response": "Haha iya rek, aku isok mbantu! Nek duitmu kurang, coba tanya sama teman sebelahmu — mungkin gelem patungan? Utawa cek menu yang lebih murah dulu, kayak mie goreng. Ayo dicoba dulu!",
+        "ttft_ms": 450,
+        "total_ms": 1800,
+        "tokens_per_second": 35,
+        "prompt_tokens": 38,
+        "completion_tokens": 45
+      },
+      "local": {
+        "response": "Iso rek! Nek kurang duit, mungkin bisa utang dulu ke teman atau pilih menu yang lebih terjangkau. Mie goreng luwih murah dari nasgor.",
+        "ttft_ms": 310,
+        "total_ms": 1500,
+        "tokens_per_second": 25,
+        "prompt_tokens": 38,
+        "completion_tokens": 32
+      }
+    },
+    {
+      "id": "json_extraction",
+      "label": "Ekstraksi JSON pesanan",
+      "category": "Structured Output",
+      "prompt": "kak pesen nasgor 2 pedes ya, es teh 1, kirim ke gedung B lt 3, atas nama Rina",
+      "cloud": {
+        "response": "{\"nama\":\"Rina\",\"items\":[{\"menu\":\"Nasi Goreng Pedas\",\"jumlah\":2,\"catatan\":\"\"},{\"menu\":\"Es Teh\",\"jumlah\":1,\"catatan\":\"\"}],\"lokasi_antar\":\"Gedung B lantai 3\"}",
+        "ttft_ms": 290,
+        "total_ms": 1100,
+        "tokens_per_second": 42,
+        "prompt_tokens": 45,
+        "completion_tokens": 38,
+        "is_valid_json": true
+      },
+      "local": {
+        "response": "{\"nama\":\"Rina\",\"items\":[{\"menu\":\"Nasi Goreng Pedas\",\"jumlah\":2,\"catatan\":\"\"},{\"menu\":\"Es Teh\",\"jumlah\":1,\"catatan\":\"\"}],\"lokasi_antar\":\"Gedung B lt 3\"}",
+        "ttft_ms": 420,
+        "total_ms": 1900,
+        "tokens_per_second": 19,
+        "prompt_tokens": 45,
+        "completion_tokens": 36,
+        "is_valid_json": true
+      }
+    },
+    {
+      "id": "tool_calling",
+      "label": "Tool calling (stok)",
+      "category": "Tool Calling",
+      "prompt": "Stok nasi goreng berapa dan berapa 48271 x 9384?",
+      "cloud": {
+        "response": "Stok nasi goreng: 12 porsi (Rp 15.000). 48271 × 9384 = 453.133.464.",
+        "ttft_ms": 350,
+        "total_ms": 2400,
+        "tokens_per_second": 38,
+        "prompt_tokens": 88,
+        "completion_tokens": 25,
+        "tool_calls_correct": true
+      },
+      "local": {
+        "response": "Stok nasi goreng ada 12 porsi dengan harga Rp15.000. Hasil 48271 × 9384 = 453.133.464.",
+        "ttft_ms": 580,
+        "total_ms": 3200,
+        "tokens_per_second": 16,
+        "prompt_tokens": 88,
+        "completion_tokens": 28,
+        "tool_calls_correct": true
+      }
+    }
+  ],
+  "tradeoffs": [
+    { "aspek": "Kualitas jawaban", "cloud": "⭐⭐⭐⭐⭐", "lokal": "⭐⭐⭐⭐" },
+    { "aspek": "Kecepatan (TTFT)", "cloud": "⭐⭐⭐⭐", "lokal": "⭐⭐⭐⭐⭐" },
+    { "aspek": "Biaya per request", "cloud": "💸 Berbayar", "lokal": "💚 Rp 0" },
+    { "aspek": "Privasi data", "cloud": "⚠️ Data ke server", "lokal": "✅ Data di laptop" },
+    { "aspek": "Butuh internet", "cloud": "❌ Ya", "lokal": "✅ Tidak" },
+    { "aspek": "Butuh hardware", "cloud": "✅ Tidak", "lokal": "⚠️ RAM 8–16 GB" },
+    { "aspek": "Kemudahan setup", "cloud": "✅ Mudah (API key)", "lokal": "⚠️ Perlu install Ollama" },
+    { "aspek": "Konsistensi JSON", "cloud": "✅ Sangat konsisten", "lokal": "⚠️ Tergantung model" }
+  ]
+}

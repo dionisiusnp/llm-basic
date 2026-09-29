@@ -1,0 +1,18 @@
+{
+  "menu": [
+    { "id": "nasgor", "nama": "Nasi Goreng", "harga": 15000, "stok": 12, "kategori": "makanan" },
+    { "id": "nasgor-pedes", "nama": "Nasi Goreng Pedas", "harga": 16000, "stok": 8, "kategori": "makanan" },
+    { "id": "mie-goreng", "nama": "Mie Goreng", "harga": 13000, "stok": 5, "kategori": "makanan" },
+    { "id": "ayam-geprek", "nama": "Ayam Geprek", "harga": 18000, "stok": 0, "kategori": "makanan" },
+    { "id": "es-teh", "nama": "Es Teh", "harga": 4000, "stok": 25, "kategori": "minuman" },
+    { "id": "es-jeruk", "nama": "Es Jeruk", "harga": 5000, "stok": 15, "kategori": "minuman" },
+    { "id": "air-putih", "nama": "Air Putih", "harga": 2000, "stok": 50, "kategori": "minuman" },
+    { "id": "teh-hangat", "nama": "Teh Hangat", "harga": 3000, "stok": 20, "kategori": "minuman" }
+  ],
+  "info": {
+    "nama": "Kantin Kampus A",
+    "jam_buka": "07:00 - 17:00",
+    "minimum_pesan": 10000,
+    "ongkos_kirim": 2000
+  }
+}
